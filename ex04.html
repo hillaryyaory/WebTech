@@ -14,7 +14,7 @@
         text-align: left;
         font-family:'Arial';
         font-size: 22pt;
-        color: rgb(31, 165, 102);
+        color: rgb(0, 0, 0);
       }
       h3 {
         font-family:'Verdana';
@@ -26,7 +26,18 @@
         font-family:'lucida handwriting' 
       } 
       img {float:left;}
-    img{border-width: 5px; border-color: red; border-style: solid;}
+    img{border-width: 5px; border-color: red; border-style: solid;
+    }
+    .blue_font{
+      color: blue;
+      font-style: italic;
+      text-decoration: underline;
+    }
+    #third_quote{
+      color:green;
+    }
+    
+
     </style>
   </head>
   <body>
@@ -35,25 +46,25 @@
     <h3>This line shows how h3 will be different from h1 and h2</h3>
     <hr />
     <h1>Quote One from Winston Churchill</h1>
-    <p>
+    <p class="blue_font">
       Criticism may not be agreeable, but it is necessary. It fulfils the same
       function as pain in the human body. It calls attention to an unhealthy
       state of things.
     </p>
-    <h3>Quote Two from Winston Churchill</h3>
+    <h3 class="blue_font">Quote Two from Winston Churchill</h3>
     <p>
       Courage is rightly esteemed the first of human qualities... because it is
       the quality which guarantees all others. Courage is what it takes to stand
       up and speak; courage is also what it takes to sit down and listen.
     </p>
-    <h2>Quote Three from Winston Churchill</h2>
+    <h2 id="third_quote">Quote Three from Winston Churchill</h2>
     <h3>This paragraph will have a border</h3>
     <p>
       Continuous effort - not strength or intelligence - is the key to unlocking
       our potential.
     </p>
     <hr />
-    <p>
+    <p class="blue_font">
       The tiger (Panthera tigris) is the largest cat species, reaching a total
       body length of up to 3.3 metres (11 ft) and weighing up to 306 kg (670
       lb). It is the third largest land carnivore (behind only the Polar bear
@@ -86,3 +97,4 @@
     </p>
   </body>
 </html>
+<button onclick="document.location='sitemap.html'">Go to sitemap</button>
