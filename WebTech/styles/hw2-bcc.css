@@ -73,9 +73,6 @@ a:hover .nav-line {
 .nav-blue {
     background-color: #007bc7;
 }
-.nav-dark-blue {
-    background-color: #006def;
-}
 .nav-darker-blue {
     background-color: darkblue;
 }
@@ -90,6 +87,9 @@ a:hover .nav-line {
 }
 .nav-purple {
     background-color: purple;
+}
+.nav-dark-blue {
+    background-color: #006def;
 }
 .nav-white {
     background-color: white;
