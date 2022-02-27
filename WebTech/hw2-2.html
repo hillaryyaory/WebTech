@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: pink; 
+    }
+    h1{
+      text-align: center; 
+    }
+    form {
+      background-color: white;
+      font-family:Arial, Helvetica, sans-serif;
+      width: 50%;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    fieldset {
+    border: 1px solid lightgrey;
+    }
+    legend {
+    font-weight: bold; 
+    font-size: large;
+    }
+</style>
+<h1>Customer Feedback</h1>
+<body>
+    <form action="https://oim-apis.herokuapp.com/form2" method="post">
+        <fieldset>
+            <legend>Your Information:</legend>
+        <div>
+       <label for="Name-input">Name:</label>
+       <input type="text"  placeholder="Enter your name here" name="Name" id="name-input"/>
+       </div>
+       <div>
+        <label for="Email-input">Email:</label>
+        <input type="text" placeholder="Enter your email here" name="Email" id="email-input" />
+        </div>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Your Review:</legend>
+        <div>
+            <label for="product-select">What Apple product did you purchase?</label>
+                <select name="product" id="product-select"> 
+                <option value="Airpods Pro">Airpods Pro</option>
+                <option value="Airpods with Wireless Charging Case">Airpods with Wireless Charging Case</option>
+                <option value="Airpods with Charging Case">Airpods with Charging Case</option>
+            </select>
+           <div>
+               What do you think of this product?
+               <div>
+               <label for="Great">
+                <input type="radio" name="rating" value="Great" />
+               </label>Great
+               <label for="Awesome"> 
+               <input type="radio" name="rating" value="Awesome" />
+               </label> Awesome
+               <label for="Good"> 
+               <input type="radio" name="rating" value="Good" />
+               </label> Good
+               </div>
+           </div>
+            <div>
+             <label for="comments">Comments:</label>
+            </div>
+            <div>
+             <textarea id="comments" name="comments" rows="3" cols="35"></textarea>
+            </div>
+       <div>
+       <input type="checkbox" name="topics" value="Sign-me-up-for-email-updates" id="Sign-me-up-for-email-updates" checked/>
+       <label for="Sign-me-up-for-email-updates">Sign me up for email updates</label>
+       </div>
+       <input type="Submit" value="Submit" />
+       <input type="Reset" value="Reset" />
+    </div>
+    </fieldset>
+    </form>
+</body>
+
+<!-- “I, Hillary Yaory, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work." -->
+</html>
