@@ -13,9 +13,9 @@ border-bottom: 1px solid grey;
 display: flex;
 overflow: hidden;
 align-items: center;
-justify-content: center;
 background-color: black;
 text-align: center;
+justify-content: center;
 }
 nav a {
     border-right: 1px solid grey;
@@ -27,30 +27,24 @@ nav a {
     text-align: center;
 }
 #BBCImage {
-    padding-right: 15px;
+    padding-right: 10px;
     margin-left: 15px;
     border-right: none;
     }
 #BBCImage img {
-    height: auto;
-    width: 100px;
-    padding-top: 2px;
+    width:100px;
 }
 #SignIn {
     border-left: 1px solid grey;
     height: 100%;
-    padding-top: 0;
     padding-right: 100px;
-    padding-bottom: 0;
     padding-left: 15px;
 }
 #SignInText {
     position: absolute;
-    margin-left: 23%;
+    margin-left: 20%;
 }
 .navigation {
-    height: 100%;
-    padding-top: 0px;
     padding-right: 25px;
     align-items: center;
 }
@@ -64,7 +58,7 @@ a:hover .nav-line {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 3px;
 }
 /* color for all the navigation links*/
 .nav-black {
