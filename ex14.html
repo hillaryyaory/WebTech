@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 14</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      img {
+        border: 10px ridge gold;
+        display: block;
+      }
+      div, img{
+        width: 500px;
+        margin: 30px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Changing image using user input</h1>
+    <button>
+    <img src="" alt="" />
+    <img src="images/al-horford.png" alt="Click here to choose the image of al-horford"/>
+    <img src="images/jaylen-brown.png" alt="Click here to choose the image of jaylen-brown"/>
+    <img src="images/jayson-tatum.png" alt="Click here to choose the image of jayson-tatum"/>
+    <img src="images/payton-pritchard.png" alt="Click here to choose the image of payton-pritchard"/>
+    </button>
+    <p id="message"></p>
+    <script>
+      function f() {
+        console.log("...starting...");
+        const name = window.prompt("Enter the last name of your favorite Celtics player");
+        // console.log(name);
+        const imageEl = document.querySelector("img");
+        if (name == "Brown") {
+          console.log("Correct!");
+          alert("Correct!")
+          imageEl.src = "images/jaylen-brown.png";
+        } else if (name == "Tatum") {
+          console.log("Correct!");
+          alert("Correct!")
+          imageEl.src = "images/jayson-tatum.png";
+        } else if (name == "Horford") {
+          console.log("Correct!");
+          alert("Correct!")
+          imageEl.src = "images/al-horford.png";
+        } else if (name == "Pritchard") {
+          console.log("Correct!");
+          alert("Correct!")
+          imageEl.src = "images/payton-pritchard.png";
+        } else {
+          console.log("Incorrect!");
+          alert("Incorrect!");
+        }
+      }
+      document.querySelector("button").onclick = function () {
+        f();
+      };
+    </script>
+  </body>
+</html>
