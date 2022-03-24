@@ -38,7 +38,7 @@
     </style>
   </head>
   <body>
-    <h1>Quiz 3 - Question 3</h1>
+    <h1>Let's Go, Celtics</h1>
     <div>
       <p>Use internal JavaScript to implement the features below:</p>
       <ul>
@@ -70,15 +70,85 @@
       <img
         alt="Jayson Tatum's Jersey"
         src="https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/tatum1.webp"
+        id="jayson"
       />
       <img
         alt="Jaylen Brown's Jersey"
         src="https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/brown1.webp"
+        id="jaylen"
       />
       <img
         alt="Larry Bird's Jersey"
         src="https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/bird1.webp"
+        id="larry"
       />
     </div>
+
+    <script>
+
+
+        function m1() {
+          document.getElementById("jayson").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/tatum2.webp";
+          document.getElementById("jaylen").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/brown2.webp";
+          document.getElementById("larry").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/bird2.webp";
+        }
+
+        function m2() {
+          document.getElementById("jayson").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/tatum2.webp";
+          document.getElementById("jaylen").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/brown2.webp";
+          document.getElementById("larry").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/bird2.webp";
+        }
+        
+        function jaylen() {
+          document.getElementById("jaylen").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/brown2.webp"
+          document.getElementById("jaylen").alt="jaylen"
+        }
+
+        function larry() {
+          document.getElementById("larry").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/bird2.webp"
+          document.getElementById("larry").alt="larry"
+        }
+        
+        </script>
+
+<img onmouseover="m1()" onmouseout="m2()">
+
+<h1
+  onmouseover="Let"
+  onmouseout="this.src='https://via.placeholder.com/150/FF0000/808080/?text=Down.com'"
+  src="https://via.placeholder.com/150/FF0000/808080/?text=Down.com"
+/>
+
+function f() {
+    console.log("...starting...");
+    const name = window.prompt("Enter the last name of your favorite Celtics player");
+    // console.log(name);
+    const imageEl = document.querySelector("img");
+    if (name == "Brown") {
+      console.log("Correct!");
+      alert("Correct!")
+      imageEl.src = "images/jaylen-brown.png";
+    } else if (name == "Tatum") {
+      console.log("Correct!");
+      alert("Correct!")
+      imageEl.src = "images/jayson-tatum.png";
+    } else if (name == "Horford") {
+      console.log("Correct!");
+      alert("Correct!")
+      imageEl.src = "images/al-horford.png";
+    } else if (name == "Pritchard") {
+      console.log("Correct!");
+      alert("Correct!")
+      imageEl.src = "images/payton-pritchard.png";
+    } else {
+      console.log("Incorrect!");
+      alert("Incorrect!");
+    }
+  }
+  document.querySelector("button").onclick = function () {
+    f();
+  };
+
+
   </body>
 </html>
