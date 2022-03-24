@@ -74,8 +74,25 @@
             <button type="button">Check</button>
           </div>
         </form>
-        <div>This number is/isn't a multiple of 3.</div>
-      </div>
     </div>
+    </div>
+
+    <script>
+      function f() {
+        console.log("...starting...");
+        const name = window.prompt("Enter number to check for multiple of 3");
+        // console.log(num);
+        if (num % 3 == 0) {
+          console.log("The number is a multiple of 3");
+          alert("The number is a multiple of 3");
+        } else { 
+         console.log("The number isn't a multiple of 3");
+          alert("The number isn't a multiple of 3");
+        }
+      }
+      document.querySelector("button").onclick = function () {
+        f();
+      };
+    </script>
   </body>
 </html>
