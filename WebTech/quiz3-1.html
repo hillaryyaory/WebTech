@@ -44,7 +44,7 @@
     </style>
   </head>
   <body>
-    <h1>Quiz 3 - Question 1</h1>
+    <h1 id="myH1">Quiz 3 - Question 1</h1>
     <div>
       <p>Use internal JavaScript to implement the features below:</p>
       <ul>
@@ -65,9 +65,21 @@
       </ul>
       <div>
         Color Scheme:
-        <button>DARK</button>
-        <button>LIGHT</button>
+        <button type="button" onclick="myFunction()">DARK</button>
+        <button type="button" onclick="light()">LIGHT</button>
       </div>
     </div>
+
+    <script>
+        function myFunction() {
+          document.getElementById("myH1").style.backgroundColor = "black";
+          document.getElementByID=d("myH1").style.color = "white";
+        }
+        function light() {
+          document.getElementById("myH1").style.backgroundColor = "lightgray";
+          document.getElementByID=d("myH1").style.color = "black";
+        }
+        </script>
+
   </body>
 </html>
