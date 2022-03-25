@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Mathematics Calculator</h1>
+
+    <form action="https://oim-apis.herokuapp.com/form2" method="post">
+       <div>
+       <input type="number" placeholder="Number 1" name="num1" id="num1"/>
+       </div>
+       <br>
+       <div>
+       <input type="number" placeholder="Number 2" name="num2" id="num2"/>
+       </div>
+       <br>
+       <input readonly type="number" name="result" placeholder="Your Result" id="result"/>
+       </form>
+<br>
+<div>
+    <button type="button" onclick="calculate('+')">+</button>
+    <button type="button" onclick="calculate('-')">-</button>
+    <button type="button" onclick="calculate('x')">x</button>
+    <button type="button" onclick="calculate('/')">÷</button>
+</div>
+    
+    <script>
+        function calculate(operation) {
+            console.log("starting here...");
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+
+            console.log(a)
+
+            a = parseInt(a);
+            b = parseInt(b);
+
+            let result;
+
+            if(operation == '+') {
+                result = a + b;
+            }
+
+            else if(operation == '-') {
+                result = a - b;
+            }
+            else if(operation == 'x') {
+                result = a * b;
+            }
+            else if(operation == '/') {
+                result = a / b;
+            }
+            else {
+                result = "Invalid operation";
+            }
+
+            console.log(result);
+
+            document.getElementById("result").value = result;
+            console.log("...done!")
+        }
+    </script>
+</body>
+</html>
