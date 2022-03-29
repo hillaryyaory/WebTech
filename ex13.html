@@ -30,7 +30,8 @@
       }
       document.querySelector("img").onmouseover = function () {
         enlargeImage();
-      };
+      }
+
       function reduce() {
         const myImg = document.querySelector("#img-tiger");
         let w = myImg.width;
@@ -40,20 +41,22 @@
       document.querySelector("img").onmouseout = function() {
         reduce();
       }
-      document.getElementById("demo").addEventListener("mouseover", mouseOver);
-      document.getElementById("demo").addEventListener("mouseout", mouseOut);
+
     function mouseOver() {
         const Mailbox = document.getElementById("demo");
         let w = Mailbox.width;
         w = w*1.5
         Mailbox.width = w;
     }
+    document.getElementById("demo").addEventListener("mouseover", mouseOver);
+
     function mouseOut() {
         const Mailbox = document.getElementById("demo");
         let w = Mailbox.width;
         w = w/1.5
         Mailbox.width = w;
     }
+    document.getElementById("demo").addEventListener("mouseout", mouseOut);
 
     </script>
   </body>
