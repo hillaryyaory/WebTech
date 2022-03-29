@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temperature Converter in Javascript</title>
+    <link
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+h1 {
+    text-align: center;
+  }
+
+  .block {
+    text-align: center;
+    background-color: antiquewhite;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  </style>
+  <body>
+        <!-- 
+        1. create heading
+        2. create a form
+        3. have two input functions "Celsius and Fahrenheit"
+        4. Create two buttons "Convert" and "Reset"
+        5. Create the CSS style
+        6. Text align the heading and the whole block
+        7. Create a brown background color for the form and buttons
+        8. Create the javascript for resetting (it's easier) deleting the input inside the forms// Create a function called CelsiusToFahrenheit (it didn't work though scraped)
+      -->
+
+    <h1>Celsius Fahrenheit Converter</h1>
+    <div class="block">
+      <form action="">
+        <div>
+          <br>
+          <label class="celsius">
+            Celsius:
+            <input type="number" id="celsius" name="f" value="" /></label>
+          <label class="fahrenheit">
+            Fahrenheit:
+            <input type="number" id="fahrenheit" name="c" value="" /></label>
+        </div>
+        <br>
+        <div>
+          <button id="convert">Convert</button>
+          <button id="clear">Reset</button>
+        </div>
+        <br>
+        <br>
+      </form>
+    </div>
+    
+</body>
+<script>
+document.getElementById('convert').onclick = convert;
+document.getElementById('clear').onclick = clearForm;
+
+function convert() {
+    let celsius = document.getElementById("celsius").value;
+    let fahrenheit = document.getElementById("fahrenheit").value;
+    
+    if (fahrenheit != '') {
+        celsius = (parseFloat(fahrenheit) - 32) / 1.8; 
+    }
+    else {
+        fahrenheit = (parseFloat(celsius) * 1.8) + 32;
+    }
+    // it's not working well, and doesn't work for some numbers like 0, but I don't know how to change it by adding another if value. 
+  
+    document.getElementById('fahrenheit').value = fahrenheit;
+    document.getElementById('celsius').value = celsius;
+}
+
+function clearForm() {
+    document.getElementById('fahrenheit').value = '';
+    document.getElementById('celsius').value = '';
+}
+</script>
+</html>
