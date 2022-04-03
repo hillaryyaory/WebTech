@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 17</title>
+    <style>
+      form {
+        background-color: Silver;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 65%;
+      }
+      h1 {
+        text-align: center;
+      }
+      div {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Radio buttons and Checkboxes</h1>
+    <form action="" method="post" id="my-form">
+      <div>Please select a background color for the form:</div>
+      <div>
+        <label><input type="radio" name="colors" value="green" />Green </label>
+        <label><input type="radio" name="colors" value="yellow" />Yellow </label>
+        <label><input type="radio" name="colors" value="lime" />Lime </label>
+        <label><input type="radio" name="colors" value="aqua" />Aqua </label>
+      </div>
+      <div>
+        Please select your favorite magazines: <br />
+        <label>
+          <input type="checkbox" name="mags" value="The New Yorker" onclick="checkbox();"/>
+          The New Yorker </label
+        ><br />
+        <label>
+          <input type="checkbox" name="mags" value="WIRED" onclick="checkbox();"/>
+          WIRED </label
+        ><br />
+        <label>
+          <input type="checkbox" name="mags" value="National Geographic" onclick="checkbox();"/>
+          National Geographic </label
+        ><br />
+        <label>
+          <input type="checkbox" name="mags" value="Sports Illustrated" onclick="checkbox();"/>
+          Sports Illustrated
+        </label>
+      </div>
+      <div>
+        <label>
+          Your magazine selections:<br />
+          <textarea name="result" cols="30" rows="4" id="area" readonly></textarea>
+        </label>
+      </div>
+      <div>
+        <input type="button" value="Select" id="change-btn"/>
+        <input type="reset" value="Clear" id="clear"/>
+      </div>
+    </form>
+        <script>
+            const myForm = document.getElementById("my-form");
+            const colors = myForm['colors']; // Array of 5 radio buttons
+            function change() {
+                let userChoice;
+                for (let i = 0; i < colors.length; i++) {
+                    console.log('Iteration ' + i + ":")
+                    const color = colors[i].value;
+                    console.log(" Color is " + color)
+                    if (colors[i].checked) {
+                        userChoice = color;
+                        console.log(" this color is selected!");
+                    }
+                }
+    
+                console.log(userChoice);
+                document.querySelector('form').style.backgroundColor = userChoice;
+            }
+    
+            document.getElementById("change-btn").onclick = function () {
+                change();
+            }
+
+            function clearForm() {
+         document.getElementsByName('colors').value = '';
+         document.getElementByName('mags').value = '';
+            }
+
+         document.getElementById('clear').onclick = clearForm;
+
+function checkbox(){
+  
+  let checkboxes = document.getElementsByName('mags');
+  let checkboxesChecked = [];
+  for (let i = 0; i < checkboxes.length; i++) {
+     if (checkboxes[i].checked) {
+        checkboxesChecked.push(checkboxes[i].value);
+     }
+  }
+  document.getElementById("area").value = checkboxesChecked;
+
+}
+    
+        </script>
+  </body>
+</html>
