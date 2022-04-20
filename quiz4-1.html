@@ -57,7 +57,7 @@
       </ul>
     </div>
     <div>
-      <form class="center">
+      <form class="center" id="calculator" action="">
         <div>
           <label
             >From:
@@ -69,11 +69,50 @@
           </label>
         </div>
         <div>
-          <input name="calc" type="button" value="Calculate" />
+          <input id="calc" type="button" value="Calculate" />
           <input name="reset" type="reset" value="Reset" />
         </div>
         <div>The product is ?.</div>
+        <label>
+            Result:
+          <input name="result" size="10" type="text" readonly disabled />
+        </label>
+        <br>
+        <label>
+          Product:
+        <input name="product" size="10" type="text" readonly disabled />
+      </label>
       </form>
     </div>
   </body>
+  <script>
+        function mult() {
+        const cal = document.getElementById("calculator");
+        let x = cal.from.value;
+        let y = cal.to.value;
+        if (isNaN(x) || isNaN(y))
+          //if x or y  is not a number
+          alert("You did not enter a number!");
+        else {
+          x = parseFloat(x);
+          y = parseFloat(y);
+          console.log(x, y);
+          let result = 0; 
+
+          for(let i = x; i <= y; i++) {
+                if (i % 2 === 0) {
+                    // if i is even
+                
+                cal.result.value += i + " x ";
+                // create an array that lists all the even values
+                // multiply the array values 
+                
+          }
+          cal.product.value = i * i;
+
+                }
+              }
+        }
+        document.getElementById("calc").onclick = mult;
+  </script>
 </html>
